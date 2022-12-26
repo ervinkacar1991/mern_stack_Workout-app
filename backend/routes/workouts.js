@@ -3,6 +3,28 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", () => {});
+//get all workouts
+router.get("/", (req, res) => {
+  res.json({ mssg: "GET all workouts" });
+});
+
+//get a single workout
+router.get("/:id", (req, res) => {
+  res.json({ mssg: " GET single workout" });
+});
+
+//POST a new workout
+router.post("/", (req, res) => {
+  res.json({ mssg: "POST a new workout" });
+});
+
+//DELETE a new workout
+router.delete("/:id", (req, res) => {
+  res.json({ mssg: "DELETE a new workput" });
+});
+//UPDATE  a workout
+router.patch("/:id", (req, res) => {
+  res.json({ mssg: "UPDATE a workput" });
+});
 
 module.exports = router;
