@@ -17,7 +17,7 @@ const Home = () => {
     fetchWorkouts();
   }, []);
   return (
-    <div>
+    <div className="home">
       <div className="workouts">
         {workouts &&
           workouts.map((workout) => (
